@@ -1,17 +1,29 @@
 == README
 
-##Portfolio and blogging site.
+===Portfolio and blogging site.
 
 Contains:
-*home page
-** jumbo image, daily or latest recipe/post, about the person, and a contact form
-*index page of all posts/recipes
-**posts would include title, description, photos, tags
+* home page
+ * jumbo image, daily or latest recipe/post, about the person, and a contact form
+* index page of all posts/recipes
+** posts would include title, description, photos, tags
 **Option to delete or edits old posts
-*Admin interface for posting and deleting
+* Admin interface for posting and deleting
 
 
 To Do:
 [ ] Design
 [ ] Contact Form
 [ ] Setup posts controller
+
+Controllers
+posts controller
+admin controller
+static controller
+
+views
+home/index
+admin login
+admin create post
+post index
+post show

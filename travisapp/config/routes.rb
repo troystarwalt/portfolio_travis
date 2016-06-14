@@ -1,4 +1,14 @@
 Rails.application.routes.draw do
+  get 'admin/show'
+
+  get 'sessions/new'
+
+  resources :recipes
+
+  # get "/pages/:page" => "pages#show"
+
+  root 'pages#show'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
