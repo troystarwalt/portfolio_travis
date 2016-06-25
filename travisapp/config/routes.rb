@@ -1,7 +1,10 @@
 Rails.application.routes.draw do
-  get 'admin/show'
+  
+  get 'admin/:id' => 'admin#show'
 
-  get 'sessions/new'
+  get 'login' => 'sessions#new'
+  post 'login' => 'sessions#create'
+  delete 'logout' => 'sessions#destroy'
 
   resources :recipes
 
