@@ -1,0 +1,6 @@
+<h1>Hi there. this is recipes</h1>
+<%= form_for(@recipe) do |f| %>
+	<%= f.text_field :title, placeholder: "Title" %>
+	<%= f.text_area :content, placeholder: "This is where you put the recipe" %>
+	<%= f.submit "Add Recipe" %>
+<% end %>

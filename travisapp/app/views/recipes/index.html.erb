@@ -8,5 +8,6 @@
 	<% if rec.admin_id != nil %>
 	<li><%= rec.admin_username %></li>
 	<% end %>
+	<%= link_to "Delete",  method: :delete %>
 </ul>
 <% end %>
