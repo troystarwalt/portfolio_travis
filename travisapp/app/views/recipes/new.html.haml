@@ -1,0 +1,7 @@
+%h1 Hi there. this is recipes
+= form_for(@recipe) do |f|
+  = f.text_field :title, placeholder: "Title"
+  %br
+  = f.text_area :content, placeholder: "This is where you put the recipe"
+  %br
+  = f.submit "Add Recipe"

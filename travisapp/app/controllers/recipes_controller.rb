@@ -8,7 +8,13 @@ class RecipesController < ApplicationController
   end
 
   def new
+    if logged_in?
       @recipe = current_admin.recipes.build
+      @admin = current_admin
+      
+    else
+      redirect_to root_path
+    end
   end
 
   def create
@@ -23,6 +29,13 @@ class RecipesController < ApplicationController
   end
 
   def destroy
+    @recipe = Recipe.find(params[:id])
+    @recipe.destroy
+
+    respond_to do |format|
+      format.html { redirect_to recipes_url }
+      format.json { head :no_content }
+    end
   end
 
   def edit
