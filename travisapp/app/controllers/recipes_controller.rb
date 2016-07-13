@@ -1,10 +1,12 @@
 class RecipesController < ApplicationController
+
+  before_action :set_recipe, only: [:show, :edit, :update, :destroy]
+
   def index
   	@recipes = Recipe.all
   end
 
   def show
-    @recipe = Recipe.find[id: params[:id]]
   end
 
   def new
@@ -13,6 +15,7 @@ class RecipesController < ApplicationController
       @admin = current_admin
       
     else
+      flash[:danger] = "Sorry you have to be logged in to create a new recipe."
       redirect_to root_path
     end
   end
@@ -29,7 +32,6 @@ class RecipesController < ApplicationController
   end
 
   def destroy
-    @recipe = Recipe.find(params[:id])
     @recipe.destroy
 
     respond_to do |format|
@@ -45,6 +47,12 @@ class RecipesController < ApplicationController
   end
 
   private
+
+  def set_recipe
+    @recipe = Recipe.find(params[:id])
+  end
+
+
   def recipe_params
     params.require(:recipe).permit(:title, :content)
   end  

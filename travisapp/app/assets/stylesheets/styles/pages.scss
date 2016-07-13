@@ -1,0 +1,56 @@
+@import "base/variables";
+
+#jumbotron {
+	width: 100%;
+	height: 500px;
+	text-align: center;
+}
+
+.jumbotron-img {
+	background: url(asset-path('street.png')) no-repeat center center fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	height: 100%;
+	width: auto;
+}
+
+.jumbotron-text {
+	color: $light_rose;
+	margin: 0 auto;
+	background: $dark_grey;
+	opacity: .5;
+	height: 100%;
+	font-size: 50px;
+}
+
+#welcome-text {
+	padding-top: 15%;
+}
+
+#intro-section-text {
+	padding-left: 15%;
+	padding-right: 15%;
+}
+
+.latest-recipe-section {
+	padding-left: 15%;
+	padding-right: 15%;
+}
+
+.recipe-container {
+	border-top: 2px solid $light_teal;
+	border-bottom: 1px solid $light_teal;
+	width: 66%;
+	margin: 0 auto;
+}
+
+.recipe-title {
+	text-align: left;
+}
+
+.recipe-footer {
+	text-align: right;
+	border-bottom: 1px solid $dark;
+}

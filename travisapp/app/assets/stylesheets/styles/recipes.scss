@@ -1,6 +1,28 @@
 @import "base/variables";
 
+form {
+	display: flex;
+	flex-direction: column;
+}
 
-body {
-background-color: $light_teal;
+.input-area {
+	border-bottom: 1px solid $dark;
+	border-top: 0;
+	border-left: 0;
+	border-right: 0;
+}
+
+textarea {
+	height: 400px;
+}
+
+.input-area:focus {
+	background: $light_teal;
+}
+
+.submit-button {
+	height: 50px;
+	border: 1px solid $dark;
+	border-radius: 5px;
+	background: $light_rose;
 }

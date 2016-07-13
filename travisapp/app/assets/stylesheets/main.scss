@@ -1,36 +1,8 @@
 
-@import "base/variables";
-@import "base/globals";
-@import "base/mixins";
-@import "styles/admin";
-@import "styles/recipes";
-@import "styles/sessions";
+// @import "base/variables";
+// @import "base/globals";
+// @import "base/mixins";
+// @import "styles/admin";
+// @import "styles/recipes";
+// @import "styles/sessions";
 
-// /********************/
-// /* Full Site Styles */
-// ******************
-
-
-html {
-	height: auto;
-}
-
-body {
-	width: 700px;
-	margin: 0 auto;
-	
-}
-
-
-/**************/
-/* Navigation */
-/**************/
-
-
-#top_right {
-	text-align: right;
-}
-
-li{
-	color: $darkgrey;
-}
