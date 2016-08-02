@@ -1,27 +1,25 @@
 !!!
 %html
-  %head
-    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
-    %title Travisapp
-    %meta{:content => "width=device-width, initial-scale=1", :name => "viewport"}/
-    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
-    = javascript_include_tag 'application', 'data-turbolinks-track' => true
-    = csrf_meta_tags
-  %body
-    #wrapper
-      %header
-        %nav
-          #logo_link.nav_links= link_to "Travis", root_path
-          .nav_links= link_to "Recipes", recipes_path
-          .nav_links= link_to "New Recipe", new_recipe_path
-      - flash.each do |message_type, message|
-        %div{:class => "alert alert-#{message_type}"}= message
-      = yield
-      %hr
-      %footer
-        - if logged_in?
-          = @current_admin.username
-          = link_to "Log out", logout_path, method: :delete
-        - else
-          = link_to "Log in", login_path
-        = debug(params) if Rails.env.development?
+%head
+%meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+%title Travisapp
+%meta{:content => "width=device-width, initial-scale=1", :name => "viewport"}/
+= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
+= stylesheet_link_tag "https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"
+= javascript_include_tag 'application', 'data-turbolinks-track' => true
+= csrf_meta_tags
+%body
+= render '_partials/navigation'
+- flash.each do |message_type, message|
+  %div{:class => "alert alert-#{message_type}"}= message
+= yield
+%hr
+%footer.footer
+  .container.is-fluid
+    .content.has-text-centered
+      - if logged_in?
+        = @current_admin.username
+        = link_to "Log out", logout_path, method: :delete
+      - else
+        = link_to "Log in", login_path
+      = debug(params) if Rails.env.development?

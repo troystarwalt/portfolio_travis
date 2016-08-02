@@ -1,17 +1,30 @@
-#jumbotron
-	.jumbotron-img
-		.jumbotron-text
-			%h1#welcome-text Hi.
-			%h3#welcome-message My name is Travis Starwalt.
-#intro-section.center-text
+%section.hero.is-large
+	.hero-body.hero-img
+		.container.hero-text
+			%h1#welcome-text.title Hi.
+			%h3#welcome-message.subtitle My name is Travis Starwalt.
+#intro-section.center-text.container
 	%p#intro-section-text
-		Lick butt and make a weird face. Spot something, big eyes, big eyes, crouch, shake butt, prepare to pounce. Cat slap dog in face claw drapes, for scratch leg; meow for can opener to feed me yet hopped up on catnip, but hide when guests come over scratch at the door then walk away. Roll on the floor purring your whiskers off meow for food, then when human fills food dish, take a few bites of food and continue meowing sit in window and stare ooo, a bird! yum scratch the furniture but if it fits, i sits but claw drapes, but meowwww. Cat slap dog in face play time, for see owner, run in terror so destroy couch as revenge. Missing until dinner time bathe private parts with tongue then lick owner's face meow. Kitty loves pigs find something else more interesting eat 
-%article.latest-recipe-section
-	%h1 Latest Recipe
-	.recipe-container
-		%header.recipe-title
-			%h2= @recipe.title
-		%content.recipe-content
-			%p= @recipe.content
-		%footer.recipe-footer
-			%p Created by: #{ @recipe.admin.username }
+		Lick butt and make a weird face. Spot something, big eyes, big eyes, crouch, shake butt, prepare to pounce. Cat slap dog in face claw drapes, for scratch leg; meow for can opener to feed me yet hopped up on catnip, but hide when guests come over scratch at the door then walk away. Roll on the floor purring your whiskers off meow for food, then when human fills food dish, take a few bites of food and continue meowing sit in window and stare ooo, a bird! yum scratch the furniture but if it fits, i sits but claw drapes, but meowwww. Cat slap dog in face play time, for see owner, run in terror so destroy couch as revenge. Missing until dinner time bathe private parts with tongue then lick owner's face meow. Kitty loves pigs find something else more interesting eat
+.container
+	.columns
+		.column.is-three-quarters
+			.box
+				.media
+					%figure.media-left
+						.image.is-64x64
+							= image_tag "knife_plate.png"
+					.media-content
+						%h1.title.is-1 Latest Recipe
+						.recipe-container
+							.recipe-title
+								%h2.title.is-3= @recipe.title
+							.recipe-content
+								%p= @recipe.content
+							.recipe-footer.level
+								.level-left
+									%p.level-item Created by: #{ @recipe.admin.username }
+								.level-right
+									= link_to "Check it out", recipe_path(@recipe), class: "level-item"
+		.column
+			=image_tag "http://placekitten.com/400/300", class: "img-responsive"

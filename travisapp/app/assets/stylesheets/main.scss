@@ -6,3 +6,8 @@
 // @import "styles/recipes";
 // @import "styles/sessions";
 
+.img-responsive {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
