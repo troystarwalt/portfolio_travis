@@ -20,7 +20,8 @@
 							.recipe-title
 								%h2.title.is-3= @recipe.title
 							.recipe-content
-								%p= @recipe.content
+								%p= @recipe.description
+								%p= @recipe.ingredient_list
 							.recipe-footer.level
 								.level-left
 									%p.level-item Created by: #{ @recipe.admin.username }

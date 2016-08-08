@@ -1,9 +1,8 @@
-%h1 Recipes#index
-%p Find me in app/views/recipes/index.html.erb
 - @recipes.each do |rec|
   %ul
     %li= rec.title
-    %li= rec.content
+    %li= rec.description
+    %li= rec.ingredient_list
     - if rec.admin_id != nil
       %li= rec.admin_username
     = link_to "View More", recipe_path(rec.id)

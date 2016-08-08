@@ -7,10 +7,11 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 
-
-10.times do |x|
+20.times do
 	Recipe.create({
-		title: "How there number #{x}",
-		content: "Content for recipe #{x}"
+		title: Faker::Beer.name,
+		description: Faker::Hipster.paragraphs(3),
+		ingredient_list:  Faker::Hipster.words(8, false, true),
+		admin_id: 4
 		})
 end
