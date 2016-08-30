@@ -1,6 +1,6 @@
 class PagesController < ApplicationController
 	def show
-		@recipe = Recipe.last
+		@recipe = Recipe.first
 		render "home"
 	end
 end

@@ -6,3 +6,5 @@
       .nav-right.nav-menu
         .nav-item= link_to "Recipes", recipes_path
         .nav-item= link_to "New Recipe", new_recipe_path
+        -if logged_in?
+          .nav-item= current_admin.username

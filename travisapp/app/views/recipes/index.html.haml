@@ -6,5 +6,6 @@
     - if rec.admin_id != nil
       %li= rec.admin_username
     = link_to "View More", recipe_path(rec.id)
-    = link_to "(Delete)",  recipe_path(rec.id), method: :delete
+    -if logged_in?
+      = link_to "(Delete)",  recipe_path(rec.id), method: :delete
   %hr
